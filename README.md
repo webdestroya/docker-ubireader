@@ -7,7 +7,7 @@ Uses the [ubi_reader](https://github.com/jrspruitt/ubi_reader) project by Jason 
 ## Usage
 
 ```
-$ docker run --rm -it -v $(pwd):/firmware <command> <params>
+$ docker run --rm -it -v $(pwd):/firmware webdestroya/ubireader:latest <command> <params>
 ```
 
 ### Example
@@ -15,7 +15,7 @@ $ docker run --rm -it -v $(pwd):/firmware <command> <params>
 This example shows a common extraction flow. It creates and destroys temporary docker containers.
 
 ```
-$ docker run --rm -it -v $(pwd):/firmware ubireader_display_info custom_ubiimage
+$ docker run --rm -it -v $(pwd):/firmware webdestroya/ubireader:latest ubireader_display_info custom_ubiimage
 
 UBI File
 ---------------------
@@ -57,6 +57,6 @@ UBI File
         vol_type: 'dynamic'
 
 
-$ docker run --rm -it -v $(pwd):/firmware ubireader_extract_files -o firmware_export custom_ubiimage
+$ docker run --rm -it -v $(pwd):/firmware webdestroya/ubireader:latest ubireader_extract_files -o firmware_export custom_ubiimage
 
 ```
